@@ -12,11 +12,15 @@ extends CharacterBody2D
 @export var _air_control: float = 0.5
 @export var _jump_dust: PackedScene
 
+@export_category("Sprite")
+@export var _is_player: bool
+
 var _direction: float
 var _jump_velocity: float
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var _sprite: Sprite2D = $Sprite2D
+
 
 func _ready() -> void:
 	_speed *= Global.pixel_per_tile
@@ -53,10 +57,16 @@ func stop_jump():
 
 
 func _physics_process(delta: float) -> void:
-	if sign(_direction) == -1:
+	if sign(_direction) == -1 and _is_player:
 		face_left()
-	elif sign(_direction) == 1:
+	elif sign(_direction) == 1 and _is_player:
 		face_right()
+	else:
+		if sign(_direction) == -1:
+			face_right()
+		elif sign(_direction) == 1:
+			face_left()
+
 	
 	if is_on_floor():
 		_ground_physics(delta)

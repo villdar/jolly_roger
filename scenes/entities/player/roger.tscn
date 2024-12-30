@@ -64,7 +64,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "clips": [{
-"end_offset": 0.0,
+"end_offset": 0.83,
 "start_offset": 0.0,
 "stream": ExtResource("5_gll3s")
 }],
@@ -278,7 +278,7 @@ states/fall/position = Vector2(560.667, 72.8441)
 states/ground/node = SubResource("AnimationNodeAnimation_tseoc")
 states/ground/position = Vector2(698.667, 72.866)
 states/jump/node = SubResource("AnimationNodeAnimation_kb31w")
-states/jump/position = Vector2(436, 72.224)
+states/jump/position = Vector2(436, 72.6374)
 transitions = ["Start", "Locomotion", SubResource("AnimationNodeStateMachineTransition_15wr2"), "Locomotion", "jump", SubResource("AnimationNodeStateMachineTransition_ieo2c"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_utedn"), "fall", "ground", SubResource("AnimationNodeStateMachineTransition_c4ykh"), "ground", "Locomotion", SubResource("AnimationNodeStateMachineTransition_5kony"), "Locomotion", "fall", SubResource("AnimationNodeStateMachineTransition_o642y")]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w0te3"]
