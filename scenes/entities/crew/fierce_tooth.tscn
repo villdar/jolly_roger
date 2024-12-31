@@ -28,24 +28,6 @@
 [ext_resource type="AudioStream" uid="uid://djmvcds8lpjqi" path="res://assets/audio/209133__lukesharples__fall-to-the-floor.wav" id="25_4eeua"]
 [ext_resource type="PackedScene" uid="uid://cqtxm227twk2e" path="res://assets/particles/fall_dust.tscn" id="28_ljriu"]
 
-[sub_resource type="Animation" id="Animation_in7nd"]
-resource_name = "idle"
-length = 0.8
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.1001, 0.2, 0.3, 0.3001, 0.4, 0.4001, 0.5, 0.5001, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("3_cetx1"), ExtResource("3_cetx1"), ExtResource("4_ruxeg"), ExtResource("5_k0tq7"), ExtResource("3_cetx1"), ExtResource("6_k6tgg"), ExtResource("3_cetx1"), ExtResource("7_64n23"), ExtResource("3_cetx1"), ExtResource("8_om0tj"), ExtResource("9_dciva"), ExtResource("10_0n0yd")]
-}
-
 [sub_resource type="Animation" id="Animation_ufxp2"]
 length = 0.001
 tracks/0/type = "value"
@@ -60,85 +42,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("3_cetx1")]
 }
-
-[sub_resource type="Animation" id="Animation_wwypp"]
-resource_name = "run"
-length = 0.6
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.1001, 0.2, 0.2001, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("11_r22pp"), ExtResource("3_cetx1"), ExtResource("12_1wsdr"), ExtResource("3_cetx1"), ExtResource("13_r1mes"), ExtResource("14_hugwg"), ExtResource("15_pv0ek"), ExtResource("16_23nin")]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("..")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [ExtResource("18_snqnu")],
-"method": &"_spaw_dust"
-}]
-}
-tracks/2/type = "audio"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../AudioStreamPlayer2D")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"clips": [{
-"end_offset": 23.65,
-"start_offset": 0.2945,
-"stream": ExtResource("18_8ftub")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/2/use_blend = true
-
-[sub_resource type="Animation" id="Animation_k6ixu"]
-resource_name = "jump"
-length = 0.3
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("17_mcyup"), ExtResource("18_57mdy"), ExtResource("19_anabo")]
-}
-tracks/1/type = "audio"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../AudioStreamPlayer2D")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"clips": [{
-"end_offset": 0.343,
-"start_offset": 0.0446,
-"stream": ExtResource("22_run21")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_lodfm"]
 resource_name = "fall"
@@ -198,6 +101,103 @@ tracks/2/keys = {
 "end_offset": 0.7735,
 "start_offset": 0.0,
 "stream": ExtResource("25_4eeua")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_in7nd"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.1001, 0.2, 0.3, 0.3001, 0.4, 0.4001, 0.5, 0.5001, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_cetx1"), ExtResource("3_cetx1"), ExtResource("4_ruxeg"), ExtResource("5_k0tq7"), ExtResource("3_cetx1"), ExtResource("6_k6tgg"), ExtResource("3_cetx1"), ExtResource("7_64n23"), ExtResource("3_cetx1"), ExtResource("8_om0tj"), ExtResource("9_dciva"), ExtResource("10_0n0yd")]
+}
+
+[sub_resource type="Animation" id="Animation_k6ixu"]
+resource_name = "jump"
+length = 0.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("17_mcyup"), ExtResource("18_57mdy"), ExtResource("19_anabo")]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AudioStreamPlayer2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.343,
+"start_offset": 0.0446,
+"stream": ExtResource("22_run21")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_wwypp"]
+resource_name = "run"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.1001, 0.2, 0.2001, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_r22pp"), ExtResource("3_cetx1"), ExtResource("12_1wsdr"), ExtResource("3_cetx1"), ExtResource("13_r1mes"), ExtResource("14_hugwg"), ExtResource("15_pv0ek"), ExtResource("16_23nin")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [ExtResource("18_snqnu")],
+"method": &"_spaw_dust"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AudioStreamPlayer2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 23.65,
+"start_offset": 0.2945,
+"stream": ExtResource("18_8ftub")
 }],
 "times": PackedFloat32Array(0)
 }

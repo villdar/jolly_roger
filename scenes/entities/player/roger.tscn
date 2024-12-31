@@ -326,7 +326,7 @@ advance_expression_base_node = NodePath("../../..")
 anim_player = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -13)
+position = Vector2(0, -15)
 shape = SubResource("CapsuleShape2D_mlryy")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

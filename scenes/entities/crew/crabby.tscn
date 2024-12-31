@@ -29,24 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://dwca7pil5ay3c" path="res://assets/particles/run_dust.tscn" id="23_ill3q"]
 [ext_resource type="Texture2D" uid="uid://dl7n40tgo6d5o" path="res://Treasure Hunters/The Crusty Crew/Sprites/Crabby/05-Ground/Ground 02.png" id="23_mfe5c"]
 
-[sub_resource type="Animation" id="Animation_3a6rc"]
-resource_name = "idle"
-length = 0.9
-loop_mode = 1
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0001, 0.0002, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("3_yxgc3"), ExtResource("3_yxgc3"), ExtResource("3_yxgc3"), ExtResource("4_xlkfi"), ExtResource("5_i5vlt"), ExtResource("6_qxuik"), ExtResource("7_0ewpn"), ExtResource("8_n11yk"), ExtResource("9_sujf0"), ExtResource("10_qkp3r"), ExtResource("11_do28s")]
-}
-
 [sub_resource type="Animation" id="Animation_728ao"]
 length = 0.001
 tracks/0/type = "value"
@@ -61,85 +43,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("3_yxgc3")]
 }
-
-[sub_resource type="Animation" id="Animation_o1hjs"]
-resource_name = "run"
-length = 0.6
-loop_mode = 1
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("12_ahh4f"), ExtResource("13_286yl"), ExtResource("14_kcymp"), ExtResource("15_l6gtj"), ExtResource("16_xe7aj"), ExtResource("17_ah5j2")]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("..")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [ExtResource("23_ill3q")],
-"method": &"_spaw_dust"
-}]
-}
-tracks/2/type = "audio"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../AudioStreamPlayer2D")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"clips": [{
-"end_offset": 19.2,
-"start_offset": 0.3,
-"stream": ExtResource("19_rmqun")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/2/use_blend = true
-
-[sub_resource type="Animation" id="Animation_fp1is"]
-resource_name = "jump"
-length = 0.3
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("18_1tdot"), ExtResource("19_rbgah"), ExtResource("20_rhh75")]
-}
-tracks/1/type = "audio"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../AudioStreamPlayer2D")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("23_csuxm")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_aoju5"]
 resource_name = "fall"
@@ -203,6 +106,103 @@ tracks/1/keys = {
 "method": &"_spaw_dust"
 }]
 }
+
+[sub_resource type="Animation" id="Animation_3a6rc"]
+resource_name = "idle"
+length = 0.9
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.0002, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_yxgc3"), ExtResource("3_yxgc3"), ExtResource("3_yxgc3"), ExtResource("4_xlkfi"), ExtResource("5_i5vlt"), ExtResource("6_qxuik"), ExtResource("7_0ewpn"), ExtResource("8_n11yk"), ExtResource("9_sujf0"), ExtResource("10_qkp3r"), ExtResource("11_do28s")]
+}
+
+[sub_resource type="Animation" id="Animation_fp1is"]
+resource_name = "jump"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("18_1tdot"), ExtResource("19_rbgah"), ExtResource("20_rhh75")]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AudioStreamPlayer2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23_csuxm")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_o1hjs"]
+resource_name = "run"
+length = 0.6
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("12_ahh4f"), ExtResource("13_286yl"), ExtResource("14_kcymp"), ExtResource("15_l6gtj"), ExtResource("16_xe7aj"), ExtResource("17_ah5j2")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [ExtResource("23_ill3q")],
+"method": &"_spaw_dust"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AudioStreamPlayer2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 19.2,
+"start_offset": 0.3,
+"stream": ExtResource("19_rmqun")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mn60l"]
 _data = {
